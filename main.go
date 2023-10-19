@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+
 	"context"
 	"errors"
 	"fmt"
@@ -65,11 +66,7 @@ func main() {
 		var outb, errb bytes.Buffer
 		cmd.Stdout = &outb
 		cmd.Stderr = &errb
-	
-		if iDiffError := cmd.Run(); iDiffError != nil {
-			fmt.Println(iDiffError)
-			os.Exit(1)
-		}
+		cmd.Run()
 		if strings.Contains(outb.String(), "PASS") {
 			fmt.Println("No status change")
 		} else {
