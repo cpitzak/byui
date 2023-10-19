@@ -6,7 +6,7 @@ This program will login to the university website and check the application stat
 
 Here is what the automation does when you run this `byui` command line tool:
 
-1. Login to https://employment.byui.net/login using your username and password (with the username / password in main.go)
+1. Login to https://employment.byui.net/login using your username and password (make sure to update the main.go with your username and password)
 2. Navigates to https://employment.byui.net/job_applications
 3. Takes a screenshot of the webpage
 4. Checks if the `.byui` folder in the users home directory exists, if not creates it.
